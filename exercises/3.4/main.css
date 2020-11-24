@@ -1,4 +1,11 @@
+p {
+    max-width: 800px;
+}
 .aside-video {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
     display: flex;
     justify-content: flex-end;
 }
