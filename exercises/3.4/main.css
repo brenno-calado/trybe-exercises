@@ -1,3 +1,10 @@
+.aside-video {
+    display: flex;
+    justify-content: flex-end;
+}
+.relevant {
+    font-weight: bold;
+}
 .scientific-name {
     font-style: italic;
 }
