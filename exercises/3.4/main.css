@@ -8,11 +8,16 @@ p {
     position: fixed;
     bottom: 10px;
     right: 10px;
-
     display: flex;
     justify-content: flex-end;
 }
-.nav ul{
+.aside-video h5 {
+    display: none;
+}
+.footer {
+    text-align: center;
+}
+.nav ul {
     background-color: aliceblue;
     display: flex;
     flex-direction: row;
