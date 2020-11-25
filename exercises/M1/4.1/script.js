@@ -29,6 +29,13 @@ function greaterOfThree(a,b,c) {
     else {console.log('Os números são iguais')}
 };
 
+//Task 4
+
+function positiveNegative(a) {
+    let result = a > 0 ? 'positive' : a < 0 ? 'negative' : 'zero';
+    console.log(result);
+};
+
 //Output area
 
-console.log(greaterOfThree(a,b,c));
+console.log(positiveNegative(a));
