@@ -36,6 +36,13 @@ function positiveNegative(a) {
     console.log(result);
 };
 
+//Task 5
+
+function triangleTest(a,b,c) {
+    let triangleOutput = a + b + c == 180;
+    console.log(triangleOutput);
+};
+
 //Output area
 
-console.log(positiveNegative(a));
+return triangleTest(a,b,c);
