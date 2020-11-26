@@ -94,6 +94,14 @@ function pointToGrade(points) {
     console.log('Your grade is ' + grade);
 };
 
+//Task 8
+
+function isItEven(a,b,c) {
+    if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0) {
+        return true;
+    }
+}
+
 //Output area
 
 return pointToGrade(points);
