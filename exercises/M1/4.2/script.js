@@ -3,6 +3,7 @@ let index = 0;
 let sumNumbers = 0;
 let meanResult = 0;
 let maxResult = 0;
+let Odds = 0;
 
 // Task 1
 
@@ -35,11 +36,13 @@ if (meanResult > 20) {
 for (index = 0; index < numbers.length; index += 1) {
   maxResult = maxResult < numbers[index] ? maxResult = numbers[index] : maxResult;
 };
-console.log(maxResult);
 
 //Task 6
 
-
+for (index = 0; index < numbers.length; index += 1) {
+  Odds = numbers[index] % 2 != 0 ? Odds +=1 : Odds;
+};
+console.log('Task 6: ',Odds);
 
 //Task 7
 
