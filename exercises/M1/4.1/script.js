@@ -90,7 +90,9 @@ function pointToGrade(points) {
         grade = 'E';
     } else if (points >= 0 && points < 50) {
         grade = 'F';
-    } else {console.log('points must range from 0 to 100')};
+    } else {
+        console.log('points must range from 0 to 100')
+    };
     console.log('Your grade is ' + grade);
 };
 
@@ -99,8 +101,17 @@ function pointToGrade(points) {
 function isItEven(a,b,c) {
     if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0) {
         return true;
-    }
-}
+    };
+};
+
+//Task 9
+
+function isItOdd(a,b,c) {
+    if (a % 2 != 0 || b % 2 != 0 || c % 2 != 0) {
+        return true;
+    };
+};
+
 
 //Output area
 
