@@ -3,6 +3,7 @@ let index = 0;
 let sumNumbers = 0;
 let meanResult = 0;
 let maxResult = 0;
+let minResult = numbers[0];
 let Odds = 0;
 
 // Task 1
@@ -36,6 +37,7 @@ if (meanResult > 20) {
 for (index = 0; index < numbers.length; index += 1) {
   maxResult = maxResult < numbers[index] ? maxResult = numbers[index] : maxResult;
 };
+console.log('Task 7: ',maxResult);
 
 //Task 6
 
@@ -46,7 +48,10 @@ console.log('Task 6: ',Odds);
 
 //Task 7
 
-
+for (index = 0; index < numbers.length; index += 1) {
+  minResult = minResult > numbers[index] ? minResult = numbers[index] :minResult;
+};
+console.log('Task 7: ',minResult);
 
 //Task 8
 
