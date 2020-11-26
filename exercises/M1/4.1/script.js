@@ -112,7 +112,17 @@ function isItOdd(a,b,c) {
     };
 };
 
+//Task 10
+
+function grandProfit(a,c) {
+    if (a < 0 || c < 0) {
+        console.log('value must be greater than 0');
+    } else {
+        let profit = 1000 * [a - [1.2 * c]];
+        console.log(profit);
+    };
+};
 
 //Output area
 
-return pointToGrade(points);
+return grandProfit(a,c);
