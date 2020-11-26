@@ -43,6 +43,42 @@ function triangleTest(a,b,c) {
     console.log(triangleOutput);
 };
 
+//Task 6
+
+var chessman = 'Paw';
+function chessMoves(chessman) {
+    let chessMove = chessman.toLowerCase();
+    switch(chessMove) {
+        case 'pawn':
+        chessMove = 'Advance one square along the same file. Advance two unoccupied squares at the start position. Capture at one diagonally forward square.';
+        console.log(chessMove);
+        break;
+        case 'rook':
+        chessMove = 'Advance all unoccupied squares along a rank or file. Can do Castling';
+        console.log(chessMove);
+        break;
+        case 'knight':
+        chessMove = 'Moves to the closest square which is not on the same file, rank or diagonal. Can leap chessman.';
+        console.log(chessMove);
+        break;
+        case 'bishop':
+        chessMove = 'Moves to all unoccupied diagonal squares';
+        console.log(chessMove);
+        break;
+        case 'queen':
+        chessMove = 'Moves to all unoccupied files, ranks and diagonal squares';
+        console.log(chessMove);
+        break;
+        case 'king':
+        chessMove = 'Moves to all unoccupied adjacent squares. Can do Castling';
+        console.log(chessMove);
+        break;
+        default:
+        chessMove = "Unkown chessman. Try again.";
+        console.log(chessMove);
+    }
+};
+
 //Output area
 
-return triangleTest(a,b,c);
+return chessMoves(chessman);
