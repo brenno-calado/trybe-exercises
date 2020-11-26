@@ -5,6 +5,7 @@ let meanResult = 0;
 let maxResult = 0;
 let minResult = numbers[0];
 let Odds = 0;
+let array25 = [];
 
 // Task 1
 
@@ -55,9 +56,14 @@ console.log('Task 7: ',minResult);
 
 //Task 8
 
-
+for (index = 1; index <= 25; index += 1) {
+  array25.push(index);
+};
+console.log('Task 8: ',array25);
 
 //Task 9
 
-
+for (index = 0; index < array25.length; index += 1) {
+  console.log('Task 9: ',array25[index]/2);
+};
 
