@@ -22,7 +22,11 @@ console.log('Task 3: ',meanResult);
 
 //Task 4
 
-
+if (meanResult > 20) {
+  console.log('Task 4: valor maior que 20')
+} else {
+  console.log('Task 4: valor menor ou igual a 20')
+};
 
 //Task 5
 
