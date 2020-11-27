@@ -5,6 +5,8 @@ let indexSecond = 0;
 
 //Task 1
 
+console.log('Task 1 \nn = ',n);
+
 if (n > 1) {
   Math.ceil(n);
   for (indexSecond = 0; indexSecond < n; indexSecond += 1) {
@@ -16,7 +18,8 @@ if (n > 1) {
 } else {
   console.log('Número precisa ser maior que 1');
 };
-console.log('\n')
+
+console.log('\nTask 2\nn = ',n);
 
 //Task 2
 
@@ -31,6 +34,9 @@ if (n > 1) {
   console.log('Número precisa ser maior que 1');
 };
 
+console.log('\nTask 3\nn = ',n);
+
 //Task 3
 
 dot = '';
+
