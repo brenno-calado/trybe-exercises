@@ -23,7 +23,7 @@ console.log('\n')
 dot = '';
 if (n > 1) {
   Math.ceil(n);
-  for (indexSecond = 0; indexSecond < n; indexSecond += 1) {
+  for (index = 0; index < n; index += 1) {
   dot += '*';
   console.log(dot);
   };
@@ -31,3 +31,6 @@ if (n > 1) {
   console.log('Número precisa ser maior que 1');
 };
 
+//Task 3
+
+dot = '';
