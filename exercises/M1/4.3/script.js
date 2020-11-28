@@ -1,7 +1,8 @@
-let n = 3;
+let n = 6;
 let index = 0;
 let dot = '';
 let indexSecond = 0;
+let blanks = '';
 
 //Task 1
 
@@ -37,6 +38,14 @@ if (n > 1) {
 console.log('\nTask 3\nn = ',n);
 
 //Task 3
-
+//usar .repeat para adicionar string
+indexThird = 0;
 dot = '';
-
+  for (indexSecond = 0; indexSecond < n; indexSecond += 1) {
+    dot += '*';
+    blanks = '';
+    for (indexThird = 0; indexThird < (n - indexSecond) - 1; indexThird += 1) {
+    blanks += ' ';
+    };
+    console.log(blanks + dot);
+  };
