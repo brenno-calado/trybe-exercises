@@ -15,15 +15,19 @@ for (let i in player) {
   console.log(i, player[i]);
 }
 
-//Task 1
+//Tasks of day 4.4
 
 let info = {
   personagem: "Margarida",
   origem: "Pato Donald",
   nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  recorrente: 'Sim',
 };
 
 function greetings(info) {
   let greetings = 'Bem vinda, ' + info.personagem;
   return greetings;
-}
+};
+
+console.log(info);
+
