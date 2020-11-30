@@ -30,5 +30,5 @@ function greetings(info) {
 };
 
 for (let key in info) {
-console.log(key);
+console.log(info[key]);
 };
