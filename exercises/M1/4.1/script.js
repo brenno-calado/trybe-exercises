@@ -1,51 +1,58 @@
-var a = 10;
-var b = 5;
-var c = 2;
-
 //Task 1
 
-let add = a + b
-let subtract = a - b;
-let multiply = a * b; 
-let divide = a / b;
-let remainder = a % b;
+function sum(a,b) {
+    return a + b;
+};
+function subtract(a,b) {
+ return a - b;
+};
+function multiply(a,b) {
+    return a * b;
+};
+function divide(a,b) {
+    return a / b;
+};
+function remainder(a,b) {
+    return a % b;
+};
 
 //Task 2
 
-let greaterThan = a > b ? a : b;
+function greaterThan(a,b) {
+    return a > b ? a : b;
+}
 
 //Task 3
 
 function greaterOfThree(a,b,c) {
     if (a > b && a > c) {
-        console.log(a)
+        return a;
     }
     else if (b > c) {
-        console.log(b)
+        return b;
     }
     else if (c != a && c != b) {
-        console.log(c)
+        return c;
     }
-    else {console.log('Os números são iguais')}
+    else {console.log('Há números iguais')};
 };
 
 //Task 4
 
 function positiveNegative(a) {
     let result = a > 0 ? 'positive' : a < 0 ? 'negative' : 'zero';
-    console.log(result);
+    return result;
 };
 
 //Task 5
 
 function triangleTest(a,b,c) {
     let triangleOutput = a + b + c == 180;
-    console.log(triangleOutput);
+    return triangleOutput;
 };
 
 //Task 6
 
-var chessman = 'Paw';
 function chessMoves(chessman) {
     let chessMove = chessman.toLowerCase();
     switch(chessMove) {
@@ -70,14 +77,14 @@ function chessMoves(chessman) {
         default:
         chessMove = "Unkown chessman. Try again.";
     };
-    console.log(chessMove);
+    return chessMove;
 };
 
 //Task 7
 
-var points = 600;
 function pointToGrade(points) {
-    let grade = null;
+    let grade = '';
+    let outputGradeMessage = '';
     if (points >= 90 && points <= 100) {
         grade = 'A';
     } else if (points >= 80 && points < 90) {
@@ -91,9 +98,9 @@ function pointToGrade(points) {
     } else if (points >= 0 && points < 50) {
         grade = 'F';
     } else {
-        console.log('points must range from 0 to 100')
+        return outputGradeMessage = 'points must range from 0 to 100';
     };
-    console.log('Your grade is ' + grade);
+    return outputGradeMessage = 'Your grade is ' + grade;
 };
 
 //Task 8
@@ -115,22 +122,23 @@ function isItOdd(a,b,c) {
 //Task 10
 
 function grandProfit(a,c) {
+    let errorMessage = '';
     if (a < 0 || c < 0) {
-        console.log('value must be greater than 0');
+        return errorMessage = 'value must be greater than 0';
     } else {
         let profit = 1000 * [a - [1.2 * c]];
-        console.log(profit);
+        return profit;
     };
 };
 
 //Task 11
 
-var salarioBruto = 3500;
 function INSS_IR(salarioBruto) {
-    let inss;
-    let salarioBase;
-    let ir;
-    let salarioLiquido;
+    let inss = 0;
+    let salarioBase = 0;
+    let ir = 0;
+    let salarioLiquido = 0;
+    let errorMessage = '';
 
     if (salarioBruto <= 1556.94 && salarioBruto >= 0) {
         inss = salarioBruto * 0.08;
@@ -141,7 +149,7 @@ function INSS_IR(salarioBruto) {
     } else if (salarioBruto > 5189.82) {
         inss = salarioBruto + 570.88;
     } else {
-        console.log('Valor precisa ser maior que 0');
+        return errorMessage = 'Valor precisa ser maior que 0';
     };
 
     salarioBase = salarioBruto - inss;
@@ -157,12 +165,8 @@ function INSS_IR(salarioBruto) {
     } else if (salarioBase > 4664.68) {
         ir = [salarioBase * 0.275] - 869.36;
     } else {
-        console.log('Valor precisa ser maior que 0');
+        return errorMessage = 'Valor precisa ser maior que 0';
     };
     salarioLiquido = salarioBase - ir;
-    console.log(salarioLiquido);
+    return salarioLiquido;
 };
-
-//Output area
-
-return INSS_IR(salarioBruto);
