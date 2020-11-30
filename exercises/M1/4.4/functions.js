@@ -9,4 +9,17 @@ function verifypalindrome(word) {
   let palindromeCheck = backwardsWord === word;
   console.log(palindromeCheck);
 }
-verifypalindrome('arara');
+
+function greaterFromArray(arrayOne) {
+  let theGreatest = 0;
+  let greatestIndex = 0;
+  for (let index = 0; index < arrayOne.length; index += 1) {
+    if (theGreatest < arrayOne[index]) {
+      theGreatest = arrayOne[index];
+      greatestIndex = index;
+    } else continue;
+  };
+  return greatestIndex;
+};
+let testArray = [2, 3, 6, 7, 10, 11];
+console.log(greaterFromArray(testArray));
