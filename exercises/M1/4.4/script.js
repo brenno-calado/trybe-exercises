@@ -29,5 +29,6 @@ function greetings(info) {
   return greetings;
 };
 
-console.log(info);
-
+for (let key in info) {
+console.log(key);
+};
