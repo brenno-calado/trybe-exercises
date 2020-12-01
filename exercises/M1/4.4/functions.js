@@ -36,3 +36,15 @@ function smallerFromArray(arrayOne) {
   return smallestIndex;
 };
 console.log(smallerFromArray(testArray));
+
+function bigName(nameList) {
+  let biggestName = nameList[0];
+  for (let index = 0; index < nameList.length; index += 1) {
+    if (biggestName.length < nameList[index].length) {
+      biggestName = nameList[index];
+    } else continue;
+  };
+  return biggestName;
+};
+nameList = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+console.log(bigName(nameList));
