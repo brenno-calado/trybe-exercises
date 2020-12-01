@@ -23,3 +23,16 @@ function greaterFromArray(arrayOne) {
 };
 let testArray = [2, 3, 6, 7, 10, 11];
 console.log(greaterFromArray(testArray));
+
+function smallerFromArray(arrayOne) {
+  let theSmallest = arrayOne[0];
+  let smallestIndex = arrayOne[0];
+  for (let index = 0; index < arrayOne.length; index += 1) {
+    if (theSmallest >= arrayOne[index]) {
+      theSmallest = arrayOne[index];
+      smallestIndex = index;
+    } else continue;
+  };
+  return smallestIndex;
+};
+console.log(smallerFromArray(testArray));
