@@ -69,3 +69,14 @@ function modeNumber(numberList) {
 
 let numberList = [2, 3, 2, 5, 8, 2, 3];
 console.log(modeNumber(numberList));
+
+let number = 5;
+
+function sumTillNumber(number) {
+  let sumResult = 0;
+  for (let index = 0; index <= number; index += 1) {
+    sumResult += index;
+  }
+  return sumResult;
+};
+console.log(sumTillNumber(number));
