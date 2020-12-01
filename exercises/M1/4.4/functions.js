@@ -48,3 +48,24 @@ function bigName(nameList) {
 };
 nameList = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 console.log(bigName(nameList));
+
+function modeNumber(numberList) {
+  let indexCompare = 0;
+  let mode = 0;
+  let bestMode = 0;
+  let bestModeIndex = 0;
+  for (let index = 0; index < numberList.length; index += 1) {
+    mode = 0;
+    for (indexCompare = 0; indexCompare < numberList.length; indexCompare += 1) {
+      mode = numberList[index] == numberList[indexCompare] ? mode += 1 : mode = mode;
+    };
+    if (bestMode < mode) {
+      bestMode = mode;
+      bestModeIndex = index;
+    } else continue;
+    };
+    return numberList[bestModeIndex];
+  };
+
+let numberList = [2, 3, 2, 5, 8, 2, 3];
+console.log(modeNumber(numberList));
