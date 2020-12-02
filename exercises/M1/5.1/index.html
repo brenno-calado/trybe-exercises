@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .allParagraph {
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="allParagraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="allParagraph">Segundo parágrafo!</p>
+
+    <script>
+      var pageTitle = document.getElementById("page-title").innerText = "O Menino e o Mundo";
+      var secondParagraph = document.getElementById("second-paragraph").innerText = "Indicado ao Oscar de melhor filme de animação";
+      var subtitle = document.getElementById("subtitle").innerText = "Filme de animação brasileiro de 2013";     
+      document.getElementById("paragraph").style.color = "red";
+      document.getElementsByClassName("allParagraph")[0].style.fontStyle = "italic";
+      var subtitle = document.getElementsByTagName("h4");
+    </script>
+  </body>
+</html>
