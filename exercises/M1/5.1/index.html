@@ -14,12 +14,12 @@
     <p id="second-paragraph" class="allParagraph">Segundo parágrafo!</p>
 
     <script>
-      var pageTitle = document.getElementById("page-title").innerText = "O Menino e o Mundo";
-      var secondParagraph = document.getElementById("second-paragraph").innerText = "Indicado ao Oscar de melhor filme de animação";
-      var subtitle = document.getElementById("subtitle").innerText = "Filme de animação brasileiro de 2013";     
-      document.getElementById("paragraph").style.color = "red";
-      document.getElementsByClassName("allParagraph")[0].style.fontStyle = "italic";
-      var subtitle = document.getElementsByTagName("h4");
+      var pageTitle = document.querySelector("#page-title").innerText = "O Menino e o Mundo";
+      var secondParagraph = document.querySelector("#second-paragraph").innerText = "Indicado ao Oscar de melhor filme de animação";
+      var subtitle = document.querySelector("#subtitle").innerText = "Filme de animação brasileiro de 2013";     
+      document.querySelector("#paragraph").style.color = "red";
+      document.querySelector(".allParagraph").style.fontStyle = "italic";
+      var subtitle = document.querySelector("h4");
     </script>
   </body>
 </html>
