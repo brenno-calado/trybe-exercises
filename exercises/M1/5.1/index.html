@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
     <style>
-      .allParagraph {
-        font-style: normal;
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
       }
     </style>
   </head>
   <body>
-    <h2 id="page-title">Título</h2>
-    <p id="paragraph" class="allParagraph">Dê uma cor para este parágrafo!</p>
-    <h4 id="subtitle">Subtítulo</h4>
-    <p id="second-paragraph" class="allParagraph">Segundo parágrafo!</p>
-
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
     <script>
-      var pageTitle = document.querySelector("#page-title").innerText = "O Menino e o Mundo";
-      var secondParagraph = document.querySelector("#second-paragraph").innerText = "Indicado ao Oscar de melhor filme de animação";
-      var subtitle = document.querySelector("#subtitle").innerText = "Filme de animação brasileiro de 2013";     
-      document.querySelector("#paragraph").style.color = "red";
-      document.querySelector(".allParagraph").style.fontStyle = "italic";
-      var subtitle = document.querySelector("h4");
+        /*
+        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+        - document.getElementById()
+        - document.getElementsByClassName()
+        - document.getElementsByTagName()
+        */
+        //Task 1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+        function makeDescription(description) {
+          let position = document.getElementsByTagName("p")[1].innerText = description;
+        }
+        makeDescription("Me vejo trabalhando numa empresa de tecnologia fora do Brasil");
+        //Task 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+        function changeMainContentBackground(color) {
+          let position = document.getElementsByClassName("main-content")[0].style.backgroundColor = color;
+        }
+        changeMainContentBackground("rgb(76,164,109)");
+        //Task 3. Crie uma função que mude a cor do quadrado vermelho para branco.
+        //Task 4. Crie uma função que corrija o texto da tag <h1>.
+        //Task 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        //Task 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
     </script>
   </body>
 </html>
