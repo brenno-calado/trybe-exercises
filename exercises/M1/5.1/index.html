@@ -45,20 +45,29 @@
         - document.getElementsByClassName()
         - document.getElementsByTagName()
         */
-        //Task 1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+        // Task 1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
         function makeDescription(description) {
           let position = document.getElementsByTagName("p")[1].innerText = description;
         }
         makeDescription("Me vejo trabalhando numa empresa de tecnologia fora do Brasil");
-        //Task 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+
+        // Task 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
         function changeMainContentBackground(color) {
-          let position = document.getElementsByClassName("main-content")[0].style.backgroundColor = color;
+          let position = document.getElementsByClassName("main-content")[0].style.background = color;
         }
         changeMainContentBackground("rgb(76,164,109)");
-        //Task 3. Crie uma função que mude a cor do quadrado vermelho para branco.
-        //Task 4. Crie uma função que corrija o texto da tag <h1>.
-        //Task 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-        //Task 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+
+        // Task 3. Crie uma função que mude a cor do quadrado vermelho para branco.
+        function changeCenterContentBackground(color) {
+          let position = document.getElementsByClassName("center-content")[0].style.background = color;
+        }
+        changeCenterContentBackground("white");
+
+        // Task 4. Crie uma função que corrija o texto da tag <h1>.
+        
+
+        // Task 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        // Task 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
     </script>
   </body>
 </html>
