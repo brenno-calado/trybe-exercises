@@ -64,6 +64,18 @@
       let mainContent = document.createElement('div');
       mainContent.className = 'main-content';
       body[0].appendChild(mainContent);
+      let centerContent = document.createElement('div');
+      centerContent.className = 'center-content';
+      mainContent.appendChild(centerContent);
+      let paragraph = document.createElement('p');
+      paragraph.innerText = 'Lorem ipsum';
+      centerContent.appendChild(paragraph);
+      let leftContent = document.createElement('div');
+      leftContent.className = 'left-content';
+      mainContent.appendChild(leftContent);
+      let rightContent = document.createElement('div');
+      rightContent.className = 'right-content';
+      mainContent.appendChild(rightContent);
     </script>
   </body>
 </html>
