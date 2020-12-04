@@ -87,11 +87,13 @@
         listNumber.innerText = numbers[index];
         unorderedList.appendChild(listNumber);
       }
+      heading.className = 'title';
       for (let index = 0; index < 3; index += 1) {
         let headings3 = document.createElement('h3');
+        headings3.className = 'description';
+        headings3.innerText = 'description';
         mainContent.appendChild(headings3);
       }
-      
     </script>
   </body>
 </html>
