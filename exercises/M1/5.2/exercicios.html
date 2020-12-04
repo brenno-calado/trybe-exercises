@@ -59,8 +59,11 @@
     <script>
       const body = document.getElementsByTagName('body');
       let heading = document.createElement('h1');
-      heading.innerText = "Exercício 5.2 - JavaScript DOM";
+      heading.innerText = 'Exercício 5.2 - JavaScript DOM';
       body[0].appendChild(heading);
+      let mainContent = document.createElement('div');
+      mainContent.className = 'main-content';
+      body[0].appendChild(mainContent);
     </script>
   </body>
 </html>
