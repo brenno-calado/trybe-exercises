@@ -76,6 +76,18 @@
       let rightContent = document.createElement('div');
       rightContent.className = 'right-content';
       mainContent.appendChild(rightContent);
+      let smallImage = document.createElement('img');
+      smallImage.src = 'https://picsum.photos/200';
+      leftContent.appendChild(smallImage);
+      let unorderedList = document.createElement('ul');
+      rightContent.appendChild(unorderedList);
+      let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let index = 0; index < 10; index += 1) {
+        let listNumber = document.createElement('li');
+        listNumber.innerText = numbers[index];
+        unorderedList.appendChild(listNumber);
+      }
+      
     </script>
   </body>
 </html>
