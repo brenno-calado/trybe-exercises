@@ -37,7 +37,7 @@ function createDezDays() {
 createDezDays();
 
 // Create button for Holiday
-function buttonCreate() {
+function fridayCreate() {
   const holidayString = 'Feriado';
   const buttonsContainer = document.querySelector('.buttons-container');
   let holidayButton = document.createElement('button');
@@ -45,7 +45,7 @@ function buttonCreate() {
   holidayButton.innerText = holidayString;
   buttonsContainer.appendChild(holidayButton);
 }
-buttonCreate();
+fridayCreate();
 
 const holidayButton = document.querySelector('.btn-holiday');
 holidayButton.addEventListener('click',highlightHolidays);
