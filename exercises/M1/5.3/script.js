@@ -37,9 +37,11 @@ function createDezDays() {
 createDezDays();
 
 // Create button for Holiday
+
+const buttonsContainer = document.querySelector('.buttons-container');
+
 function holidayCreate() {
   const holidayString = 'Feriado';
-  const buttonsContainer = document.querySelector('.buttons-container');
   let holidayButton = document.createElement('button');
   holidayButton.className = 'btn-holiday';
   holidayButton.innerText = holidayString;
@@ -65,4 +67,13 @@ function highlightHolidays() {
     clicked = false;
   }
 }
-friday
+
+// create button for Friday
+
+function fridayCreate() {
+  let fridayButton = document.createElement('button');
+  fridayButton.id = 'btn-friday';
+  fridayButton.innerText = 'Sexta-feira';
+  buttonsContainer.appendChild(fridayButton);
+}
+fridayCreate();
