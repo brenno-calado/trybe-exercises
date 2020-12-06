@@ -37,12 +37,31 @@ function createDezDays() {
 createDezDays();
 
 // Create button for Holiday
-const holidayString = 'Feriado';
-function buttonCreate(holidayString) {
+function buttonCreate() {
+  const holidayString = 'Feriado';
   const buttonsContainer = document.querySelector('.buttons-container');
-  let buttonSpawn = document.createElement('button');
-  buttonSpawn.className = 'btn-holiday';
-  buttonSpawn.innerText = holidayString;
-  buttonsContainer.appendChild(buttonSpawn);
+  let holidayButton = document.createElement('button');
+  holidayButton.className = 'btn-holiday';
+  holidayButton.innerText = holidayString;
+  buttonsContainer.appendChild(holidayButton);
 }
-buttonCreate(holidayString);
+buttonCreate();
+
+const holidayButton = document.querySelector('.btn-holiday');
+holidayButton.addEventListener('click',highlightHolidays);
+let clicked = false;
+
+function highlightHolidays() {
+  let holiday = document.querySelectorAll('.holiday');
+  if (clicked === false) {
+    for (let index = 0; index < holiday.length; index += 1) {
+    holiday[index].style.backgroundColor = 'rgb(238,120,120)';
+    }
+    clicked = true;
+  } else {
+    for (let index = 0; index < holiday.length; index += 1) {
+    holiday[index].style.backgroundColor = 'rgb(238,238,238)';
+    }
+    clicked = false;
+  }
+}
