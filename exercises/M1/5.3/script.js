@@ -26,10 +26,10 @@ function createDezDays() {
     dezDayListItem.innerHTML = dezDays;
     dezDayListItem.className = 'day';
     if (dezDays === 4 || dezDays === 11 || dezDays === 18 || dezDays === 25) {
-      dezDayListItem.className = 'day friday';
+      dezDayListItem.classList.add('friday');
     }
     if (dezDays === 24 || dezDays === 25 || dezDays === 31) {
-      dezDayListItem.className = 'day holiday';
+      dezDayListItem.classList.add('holiday');
     }
     dayList.appendChild(dezDayListItem);
   }
@@ -51,20 +51,20 @@ holidayCreate();
 
 const holidayButton = document.querySelector('.btn-holiday');
 holidayButton.addEventListener('click',highlightHolidays);
-let clicked = false;
+let clickHoliday = false;
 
 function highlightHolidays() {
   let holiday = document.querySelectorAll('.holiday');
-  if (clicked === false) {
+  if (clickHoliday === false) {
     for (let index = 0; index < holiday.length; index += 1) {
     holiday[index].style.backgroundColor = 'rgb(238,120,120)';
     }
-    clicked = true;
+    clickHoliday = true;
   } else {
     for (let index = 0; index < holiday.length; index += 1) {
     holiday[index].style.backgroundColor = 'rgb(238,238,238)';
     }
-    clicked = false;
+    clickHoliday = false;
   }
 }
 
@@ -77,3 +77,24 @@ function fridayCreate() {
   buttonsContainer.appendChild(fridayButton);
 }
 fridayCreate();
+
+const fridayButton = document.querySelector('#btn-friday');
+fridayButton.addEventListener('click',highlightFridays);
+let clickFriday = false;
+
+const fridayText = [4, 11, 18, 25];
+function highlightFridays() {
+  let fridays = document.querySelectorAll('.friday');
+  
+  if (clickFriday === false) {
+    for (let index = 0; index < fridays.length; index += 1) {
+    fridays[index].innerText = 'Sextou! o/';
+    }
+    clickFriday = true;
+  } else {
+    for (let index = 0; index < fridays.length; index += 1) {
+    fridays[index].innerText = fridayText[index];
+    }
+    clickFriday = false;
+  }
+}
