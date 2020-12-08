@@ -98,3 +98,18 @@ function highlightFridays() {
     clickFriday = false;
   }
 }
+
+// Zoom effect on day number
+let daysListed = document.getElementById('days');
+daysListed.addEventListener('mouseover', zoom);
+daysListed.addEventListener('mouseout', zoomOff)
+
+// Looked up event.target documentation at developer.mozilla
+
+function zoom(evt) {
+  console.log(evt.target);
+  evt.target.style.fontSize = '30px';
+}
+function zoomOff(evt) {
+  evt.target.style.fontSize = '20px';
+}
