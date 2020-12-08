@@ -132,3 +132,14 @@ function colorTask(taggingColor) {
   tasks.appendChild(colorLegend);
 }
 colorTask(taggingColor);
+
+let colorLegend = document.querySelector('.task');
+colorLegend.addEventListener('click', colorSelected);
+
+function colorSelected() {
+  if (colorLegend.classList.contains('selected')) {
+    colorLegend.classList.remove('selected');
+  } else {
+    colorLegend.classList.add('selected');
+  }
+}
