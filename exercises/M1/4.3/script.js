@@ -115,3 +115,16 @@ for (index = 0; index < n; index += 2) {
   }
   blankAmount -= 1;
 }
+let notPrime = 'O número não é primo';
+let prime = 'O número é primo.';
+function isItPrime(n) {
+  for (index = 1; index < n; index += 1) {
+    if (index % n === 0 || index !== 1) {
+      console.log(notPrime);
+      return notPrime;
+    }
+  }
+  console.log(prime);
+  return prime;
+}
+isItPrime(n);
