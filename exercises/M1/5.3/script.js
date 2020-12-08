@@ -136,6 +136,7 @@ colorTask(taggingColor);
 let colorLegend = document.querySelector('.task');
 colorLegend.addEventListener('click', colorSelected);
 
+//checked mozilla documentation on classList to use contains
 function colorSelected() {
   if (colorLegend.classList.contains('selected')) {
     colorLegend.classList.remove('selected');
