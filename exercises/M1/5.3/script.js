@@ -17,12 +17,14 @@ createDaysOfTheWeek();
 
 // Create List of days
 
+const dayList = document.getElementById('days');
+
 function createDezDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  const dayList = document.getElementById('days');
+  
   for (let index = 0; index < dezDaysList.length; index += 1) {
     const dezDays = dezDaysList[index];
-    dezDayListItem = document.createElement('li');
+    let dezDayListItem = document.createElement('li');
     dezDayListItem.innerHTML = dezDays;
     dezDayListItem.className = 'day';
     if (dezDays === 4 || dezDays === 11 || dezDays === 18 || dezDays === 25) {
@@ -144,3 +146,15 @@ function colorSelected() {
     colorLegend.classList.add('selected');
   }
 }
+
+dayList.addEventListener('click', colorDay);
+
+function colorDay(evt) {
+  if (colorLegend.classList.contains('selected')) {
+    if (evt.target.style.color !== taggingColor) {
+    evt.target.style.color = `${taggingColor}`;
+    } else {
+      evt.target.style.color = 'rgb(119 , 119 , 119)';
+    }
+  }
+} 
