@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        margin: 5px;
+        padding: 25px;
+        border: solid 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="paiDoPai">
+      <div id="pai">
+        <div id="primeiroFilho"></div>
+        <div id="elementoOndeVoceEsta">
+          <div id="primeiroFilhoDoFilho"></div>
+          <div id="segundoEUltimoFilhoDoFilho"></div>
+        </div>
+        Atenção!
+        <div id="terceiroFilho"></div>
+        <div id="quartoEUltimoFilho"></div>
+      </div>
+    </div>
+  <script>
+    let allDivs = document.querySelectorAll('div');
+    console.log(allDivs);
+    const manterDivs = [1, 3, 4];
+    for (let index = 0; index < allDivs.length; index += 1) {
+      if (index === manterDivs[0] || index === manterDivs[1] || index === manterDivs[2]) {
+        let newDivs = document.createElement('div');
+        newDivs.id = allDivs[index].id;
+        newDivs.innerText = allDivs[index].innerText;
+        document.body.appendChild(newDivs);
+        console.log(newDivs);
+      } 
+    }
+    allDivs[0].remove();
+    
+  </script>
+  </body>
+</html>
