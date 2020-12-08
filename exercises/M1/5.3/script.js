@@ -113,3 +113,12 @@ function zoom(evt) {
 function zoomOff(evt) {
   evt.target.style.fontSize = '20px';
 }
+
+let tasks = document.querySelector('.my-tasks');
+let taskToAdd = 'Codar';
+function addTask(taskToAdd) {
+  let spanTask = document.createElement('span');
+  spanTask.innerText = taskToAdd;
+  tasks.appendChild(spanTask);
+}
+addTask(taskToAdd);
