@@ -57,7 +57,7 @@ function highlightHolidays() {
   let holiday = document.querySelectorAll('.holiday');
   if (clickHoliday === false) {
     for (let index = 0; index < holiday.length; index += 1) {
-    holiday[index].style.backgroundColor = 'rgb(238,120,120)';
+    holiday[index].style.backgroundColor = 'white';
     }
     clickHoliday = true;
   } else {
@@ -122,3 +122,13 @@ function addTask(taskToAdd) {
   tasks.appendChild(spanTask);
 }
 addTask(taskToAdd);
+
+let taggingColor = 'green';
+
+function colorTask(taggingColor) {
+  let colorLegend = document.createElement('div');
+  colorLegend.className = 'task';
+  colorLegend.style.background = taggingColor;
+  tasks.appendChild(colorLegend);
+}
+colorTask(taggingColor);
