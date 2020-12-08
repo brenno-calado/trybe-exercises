@@ -158,3 +158,19 @@ function colorDay(evt) {
     }
   }
 } 
+
+let commitmentList = document.querySelector('.task-list');
+let inputCommitment = document.getElementById('task-input');
+let addButton = document.getElementById('btn-add');
+inputCommitment.addEventListener('change', addCommitment);
+
+function addCommitment() {
+  if (inputCommitment.value !== '') {
+    let commitment = document.createElement('li');
+    commitment.innerText = inputCommitment.value;
+    commitmentList.appendChild(commitment);
+  } else {
+    alert('Algum texto deve ser adicionado');
+  }
+}
+
