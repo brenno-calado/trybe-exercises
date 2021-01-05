@@ -12,6 +12,12 @@ function stateListGenerator() {
   }
 }
 
+function submitButtonFunction(evt) {
+  
+}
+
 window.onload = function () {
   stateListGenerator();
+  const submitButton = document.querySelector('#submit-button');
+  submitButton.addEventListener('click', submitButtonFunction);
 };

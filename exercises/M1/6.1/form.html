@@ -5,42 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <script src="script.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <form action="">
+  <form action="/form" method="POST" autofill="off" autocomplete="off">
     <fieldset>
-      <h2>Complete seus dados</h2>
+      <h2 class="display-4 text-muted">Complete seus dados</h2>
+      <div class="form-group">
       <label for="full-name">Nome completo: </label>
       <input type="text" name="name" id="full-name" maxlength="40" required>
+      </div>
+      <div class="form-group">
       <label for="email">Email: </label>
-      <input type="email" name="email" id="email" maxlength="50" required>
+      <input type="text" name="email" id="email" maxlength="50" required>
+      </div>
+      <div class="form-group">
       <label for="cpf">CPF: </label>
-      <input type="text" name="cpf" id="cpf" maxlength="11" required>
+      <input type="text" name="cpf" id="cpf" maxlength="11" minlength="11" required>
+      </div>
+      <div class="form-group">
       <label for="address">Endereço: </label>
       <input type="text" name="end" id="address" maxlength="200" required>
+      </div>
+      <div class="form-group">
       <label for="city">Cidade: </label>
       <input type="text" name="cidade" id="city" maxlength="28" required>
+      </div>
+      <div class="form-group">
       <label for="state">Estado: </label>
       <select name="estado" id="state" required></select>
       <input type="radio" name="house-type" id="house" required>
+      </div>
+      <div class="form-group">
       <label for="house">Casa</label>
       <input type="radio" name="house-type" id="apartment">
+      </div>
+      <div class="form-group">
       <label for="apartment">Apartamento</label>
+      </div>
     </fieldset>
     <fieldset>
+      </div>
+      <div class="form-group">
       <label for="abstract">Resumo</label>
       <br>
       <textarea name="abstract" id="abstract" cols="30" rows="5" maxlength="1000" required>Digite aqui um resumo do seu currículo</textarea>
+      </div>
+      <div class="form-group">
       <label for="role">Cargo: </label>
       <input type="text" name="role" id="cargo" maxlength="40" required>
+      </div>
+      <div class="form-group">
       <label for="role-description">Descrição do Cargo:</label>
       <input type="text" name="role-description" id="role-description" maxlength="500" required>
+      </div>
+      <div class="form-group">
       <label for="role-start-date">Data de início</label>
-      <input type="date" id="role-start-date" name="role-start" min="01/01/0000" max="01/01/2050" required>
+      <input type="text" id="role-start-date" name="role-start" min="0000-01-01" max="2050-01-01" required>
     </fieldset>
-    <button type="submit">Enviar</button>
+    <button type="submit" id="submit-button" class="btn btn-success">Enviar Formulário</button>
   </form>
+  </div>
   <div id="submitted-info"></div>
 </body>
 </html>
