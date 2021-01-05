@@ -1,4 +1,4 @@
-let n = 7;
+let n = 9;
 let index = 0;
 let dot = '';
 let indexSecond = 0;
@@ -87,3 +87,44 @@ if (n >= 3) {
 } else {
   console.log('Number is not greater or equal to 2');
 };
+
+console.log('\nBonus 1\n');
+
+let blankAmount = (n - 1) / 2;
+let innerBlanks = '';
+for (index = 0; index < n; index += 2) {
+  blanks = '';
+  dot = '';
+  for (indexSecond = 0; indexSecond < blankAmount; indexSecond += 1) {
+    blanks += ' ';
+  }
+  dot += '*';
+  if (index === 0) {
+    console.log(blanks + dot + blanks);
+  } else if (index === 2) {
+    innerBlanks += ' ';
+    console.log(blanks + dot + innerBlanks + dot + blanks);
+  } else if (index > 2 & index < n -1) {
+    innerBlanks += '  ';
+    console.log(blanks + dot + innerBlanks + dot + blanks);
+  } else if (index = n - 1) {
+    for (indexSecond = 1; indexSecond < n; indexSecond += 1) {
+      dot += '*';
+    }
+    console.log(dot);
+  }
+  blankAmount -= 1;
+}
+let notPrime = 'O número não é primo';
+let prime = 'O número é primo.';
+function isItPrime(n) {
+  for (index = 1; index < n; index += 1) {
+    if (index % n === 0 || index !== 1) {
+      console.log(notPrime);
+      return notPrime;
+    }
+  }
+  console.log(prime);
+  return prime;
+}
+isItPrime(n);
