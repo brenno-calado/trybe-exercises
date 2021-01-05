@@ -1,0 +1,12 @@
+fieldset {
+  margin: 12px 0;
+  padding: 25px;
+}
+
+form {
+  margin: 2em 5%;
+}
+
+input[type='text'], input[type='email'] {
+  margin: 10px 15px 10px 0;
+}

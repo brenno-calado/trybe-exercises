@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <h2>Complete seus dados</h2>
+      <label for="full-name">Nome completo: </label>
+      <input type="text" name="name" id="full-name" maxlength="40" required>
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email" maxlength="50" required>
+      <label for="cpf">CPF: </label>
+      <input type="text" name="cpf" id="cpf" maxlength="11" required>
+      <label for="address">Endereço: </label>
+      <input type="text" name="end" id="address" maxlength="200" required>
+      <label for="city">Cidade: </label>
+      <input type="text" name="cidade" id="city" maxlength="28" required>
+      <label for="state">Estado: </label>
+      <select name="estado" id="state" required></select>
+      <input type="radio" name="house-type" id="house" required>
+      <label for="house">Casa</label>
+      <input type="radio" name="house-type" id="apartment">
+      <label for="apartment">Apartamento</label>
+    </fieldset>
+    <fieldset>
+      <label for="abstract">Resumo</label>
+      <br>
+      <textarea name="abstract" id="abstract" cols="30" rows="5" maxlength="1000" required>Digite aqui um resumo do seu currículo</textarea>
+      <label for="role">Cargo: </label>
+      <input type="text" name="role" id="cargo" maxlength="40" required>
+      <label for="role-description">Descrição do Cargo:</label>
+      <input type="text" name="role-description" id="role-description" maxlength="500" required>
+      <label for="role-start-date">Data de início</label>
+      <input type="date" id="role-start-date" name="role-start" min="01/01/0000" max="01/01/2050" required>
+    </fieldset>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="submitted-info"></div>
+</body>
+</html>
