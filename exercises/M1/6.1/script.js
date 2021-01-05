@@ -13,7 +13,11 @@ function stateListGenerator() {
 }
 
 function submitButtonFunction(evt) {
-  
+  evt.preventDefault();
+}
+
+function implementPikaday() {
+  var picker = document.querySelector('#role-start-date');
 }
 
 window.onload = function () {
