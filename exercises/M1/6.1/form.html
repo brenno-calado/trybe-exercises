@@ -13,63 +13,56 @@
 </head>
 <body>
   <form action="#" method="POST" class="js-form form">
-    <fieldset>
       <h2 class="display-4 text-muted">Complete seus dados</h2>
       <div class="form-group">
-      <label for="full-name">Nome completo: </label>
-      <input type="text" class="form-control" name="name" id="full-name" maxlength="40" required>
+        <label for="full-name">Nome completo: </label>
+        <input type="text" data-validate-field="name" class="form-control" name="name" id="full-name" maxlength="40" required>
       </div>
       <div class="form-group">
-      <label for="email">Email: </label>
-      <input type="text" class="form-control" name="email" id="email" maxlength="50" required>
+        <label for="email">Email: </label>
+        <input type="text" data-validate-field="email" class="form-control" name="email" id="email" maxlength="50" required>
       </div>
       <div class="form-group">
-      <label for="cpf">CPF: </label>
-      <input type="text" class="form-control" name="cpf" id="cpf" maxlength="11" minlength="11" required>
+        <label for="cpf">CPF: </label>
+        <input type="text" data-validate-field="text" class="form-control" name="cpf" id="cpf" maxlength="11" minlength="11" required>
       </div>
       <div class="form-group">
-      <label for="address">Endereço: </label>
-      <input type="text" name="end" id="address" maxlength="200" required>
+        <label for="address">Endereço: </label>
+        <input type="text" data-validate-field="text" name="end" id="address" maxlength="200" required>
       </div>
       <div class="form-group">
-      <label for="city">Cidade: </label>
-      <input type="text" name="cidade" id="city" maxlength="28" required>
+        <label for="city">Cidade: </label>
+        <input type="text" data-validate-field="text" name="cidade" id="city" maxlength="28" required>
       </div>
       <div class="form-group">
-      <label for="state">Estado: </label>
-      <select name="estado" id="state" required></select>
-      <input type="radio" name="house-type" id="house" required>
+        <label for="state">Estado: </label>
+        <select name="estado" id="state" required></select>
       </div>
       <div class="form-group">
-      <label for="house">Casa</label>
-      <input type="radio" name="house-type" id="apartment">
+        <input type="radio" data-validate-field="radio" name="house-type" id="house" required>
+        <label for="house">Casa</label>
+        <input type="radio" data-validate-field="radio" name="house-type" id="apartment">
+        <label for="apartment">Apartamento</label>
       </div>
       <div class="form-group">
-      <label for="apartment">Apartamento</label>
-      </div>
-    </fieldset>
-    <fieldset>
-      </div>
-      <div class="form-group">
-      <label for="abstract">Resumo</label>
-      <br>
-      <textarea name="abstract" id="abstract" cols="30" rows="5" maxlength="1000" required>Digite aqui um resumo do seu currículo</textarea>
+        <label for="abstract">Resumo</label>
+        <br>
+        <textarea name="abstract" id="abstract" cols="30" rows="5" maxlength="1000" required>Digite aqui um resumo do seu currículo</textarea>
       </div>
       <div class="form-group">
-      <label for="role">Cargo: </label>
-      <input type="text" name="role" id="cargo" maxlength="40" required>
+        <label for="role">Cargo: </label>
+        <input type="text" data-validate-field="text" name="role" id="cargo" maxlength="40" required>
       </div>
       <div class="form-group">
-      <label for="role-description">Descrição do Cargo:</label>
-      <input type="text" name="role-description" id="role-description" maxlength="500" required>
+        <label for="role-description">Descrição do Cargo:</label>
+        <input type="text" data-validate-field="text" name="role-description" id="role-description" maxlength="500" required>
       </div>
       <div class="form-group">
-      <label for="role-start-date">Data de início</label>
-      <input type="text" id="role-start-date" name="role-start" min="0000-01-01" max="2050-01-01" required>
-    </fieldset>
-    <button type="submit" id="submit-button" class="btn btn-success">Enviar Formulário</button>
+        <label for="role-start-date">Data de início</label>
+        <input type="text" data-validate-field="text" id="role-start-date" name="role-start" min="0000-01-01" max="2050-01-01" required>
+        <button type="submit" id="submit-button" class="btn btn-success">Enviar Formulário</button>
+      </div>
   </form>
-  </div>
   <div id="submitted-info"></div>
 </body>
 </html>

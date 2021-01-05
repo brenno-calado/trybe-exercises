@@ -17,11 +17,20 @@ function submitButtonFunction(evt) {
 }
 
 function implementPikaday() {
-  var picker = document.querySelector('#role-start-date');
+  var picker = new Pikaday({ field: document.querySelector('#role-start-date'),
+    format: 'DD/MM/YYYY',
+    toString(date, format) {
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+  });
 }
 
 window.onload = function () {
   stateListGenerator();
   const submitButton = document.querySelector('#submit-button');
   submitButton.addEventListener('click', submitButtonFunction);
+  implementPikaday();
 };
