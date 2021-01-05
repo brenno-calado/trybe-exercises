@@ -1,0 +1,17 @@
+body {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.dark-mode {
+  background-color: #242424;
+  color: #d8d8d8;
+}
+
+.dark {
+  fill: #242424;
+}
+
+.light {
+  fill: #d8d8d8;
+}
