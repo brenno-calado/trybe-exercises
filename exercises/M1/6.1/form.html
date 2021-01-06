@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+  <script src="node_modules/pikaday/pikaday.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <form action="#" method="POST" class="form-control">
+        <h2 class="display-4 text-muted">Complete seus dados</h2>
+        <div class="form-group">
+          <label for="full-name" class="form-label">Nome completo: </label>
+          <input type="text" data-validate-field="name" class="form-control" name="name" id="full-name" maxlength="40" required>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email: </label>
+          <input type="text" data-validate-field="email" class="form-control" name="email" id="email" maxlength="50" required>
+        </div>
+        <div class="form-group">
+          <label for="cpf" class="form-label">CPF: </label>
+          <input type="text" data-validate-field="text" class="form-control" name="cpf" id="cpf" maxlength="11" minlength="11" required>
+        </div>
+        <div class="form-group">
+          <label for="address" class="form-label">Endereço: </label>
+          <input type="text" data-validate-field="text" class="form-control" name="end" id="address" maxlength="200" required>
+        </div>
+        <div class="form-group">
+          <label for="city" class="form-label">Cidade: </label>
+          <input type="text" data-validate-field="text" class="form-control" name="cidade" id="city" maxlength="28" required>
+        </div>
+        <div class="form-group">
+          <label for="state" class="form-label">Estado: </label>
+          <select class="form-select" name="estado" id="state" required></select>
+        </div>
+        <div class="form-check">
+          <input type="radio" data-validate-field="radio" class="form-check-input" name="house-type" id="house" required>
+          <label for="house" class="form-check-label">Casa</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" data-validate-field="radio" class="form-check-input" name="house-type" id="apartment">
+          <label for="apartment" class="form-check-label">Apartamento</label>
+        </div>
+        <div class="form-group">
+          <label for="abstract" class="form-label">Resumo</label>
+          <textarea name="abstract" class="form-control" id="abstract" cols="30" rows="5" maxlength="1000" placeholder="Digite aqui um resumo do seu currículo" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="role" class="form-label">Cargo: </label>
+          <input type="text" data-validate-field="text" class="form-control" name="role" id="cargo" maxlength="40" required>
+        </div>
+        <div class="form-group">
+          <label for="role-description" class="form-label">Descrição do Cargo:</label>
+          <input type="text" data-validate-field="text" class="form-control" name="role-description" id="role-description" maxlength="500" required>
+        </div>
+        <div class="form-group">
+          <label for="role-start-date" class="form-label">Data de início</label>
+          <input type="text" data-validate-field="text" class="form-control" id="role-start-date" name="role-start" min="0000-01-01" max="2050-01-01" required>
+          <div class="d-grid p-2">
+            <button type="submit" id="submit-button" class="btn btn-success">Enviar Formulário</button>
+          </div>
+        </div>
+    </form>
+  </div>
+  <div id="submitted-info"></div>
+</body>
+</html>
