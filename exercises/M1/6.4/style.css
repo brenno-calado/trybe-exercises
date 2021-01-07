@@ -78,6 +78,8 @@ body {
   display: flex;
   flex-basis: 350px;
   flex-direction: column;
+  flex-grow: 1;
+  align-content: center;
   margin: 20px;
 }
 
@@ -87,6 +89,6 @@ body {
 }
 
 .aside-container p {
-  margin: 10px 0;
-  text-align: justify;
+  margin: 1.2em 0;
+  text-align: center;
 }
