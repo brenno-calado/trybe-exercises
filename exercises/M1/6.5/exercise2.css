@@ -18,7 +18,26 @@ header {
   height: 100%;
 }
 
-.container button {
+h1, h2, h3 {
+  font-size: 1.1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aside-two {
+  bottom: 180px;
+  order: 2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .header-button {
   padding: 5px 10px;
   position: fixed;
   right: 10px;
@@ -26,6 +45,28 @@ header {
   z-index: 2;
 }
 
-li {
-  list-style: none;
+.footer {
+  bottom: 5px;
+  order: 3;
+}
+
+.info {
+  background-color: wheat;
+  font-size: 0.8em;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+}
+
+.info-button {
+  padding: 5px 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  z-index: 2;
+}
+
+.main-content {
+  padding: 12px;
+  text-align: justify;
 }

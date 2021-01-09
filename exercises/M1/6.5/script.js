@@ -23,11 +23,25 @@ function hideHeader() {
   closeButton.style.display = 'none';
 }
 
+function toggleInfo() {
+  const info = document.querySelector('#aside-two');
+  const footer = document.querySelector('#footer'); 
+  if (info.style.display === 'none') {
+    info.style.display = 'block';
+    footer.style.display = 'block';
+  } else {
+    info.style.display = 'none';
+    footer.style.display = 'none';
+  }
+}
+
 function addEventListeners() {
   const closeButton = document.querySelector('#close-header');
   const openButton = document.querySelector('#open-header');
+  const infoButton = document.querySelector('#info-button');
   closeButton.addEventListener('click', closeHeader);
   openButton.addEventListener('click', openHeader);
+  infoButton.addEventListener('click', toggleInfo);
 }
 
 window.onload = function () {
