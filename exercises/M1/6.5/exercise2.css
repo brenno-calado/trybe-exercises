@@ -52,8 +52,9 @@ ul {
 
 .info {
   background-color: wheat;
+  display: none;
   font-size: 0.8em;
-  padding: 5px;
+  padding: 5px 5px 55px 5px;
   position: fixed;
   width: 100%;
 }

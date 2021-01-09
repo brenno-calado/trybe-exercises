@@ -26,7 +26,7 @@ function hideHeader() {
 function toggleInfo() {
   const info = document.querySelector('#aside-two');
   const footer = document.querySelector('#footer'); 
-  if (info.style.display === 'none') {
+  if (info.style.display === 'none' || info.style.display === '') {
     info.style.display = 'block';
     footer.style.display = 'block';
   } else {

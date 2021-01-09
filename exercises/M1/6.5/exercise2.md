@@ -7,5 +7,5 @@
 - [x] mobile header should be distributed on the side when clicked at sandwich button
 - [ ] laptop header should be on top of the screen but disappear after a time
 - [ ] large screen header should be sticky on top of the screen
-- [ ] info about the book should be as a button that shows a dropdown info
+- [x] info about the book should be as a button that shows a dropdown info
 - [ ] the chapter list should be inside a dropdown select button
