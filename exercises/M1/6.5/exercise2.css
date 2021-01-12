@@ -54,20 +54,46 @@ ul {
   background-color: wheat;
   display: none;
   font-size: 0.8em;
+  max-width: 320px;
+  min-width: 320px;
   padding: 5px 5px 55px 5px;
   position: fixed;
-  width: 100%;
+  right: 0;
 }
 
 .info-button {
+  bottom: 20px;
   padding: 5px 10px;
   position: fixed;
-  right: 10px;
-  bottom: 20px;
+  right: 15px;
   z-index: 2;
 }
 
 .main-content {
-  padding: 12px;
+  padding: 24px;
   text-align: justify;
+}
+
+.to-top {
+  bottom: 50px;
+  display: none;
+  padding: 10px 15px;
+  position: fixed;
+  right: 10px;
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    column-count: 2;
+    column-gap: 25px;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    max-width: 1024px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  
 }

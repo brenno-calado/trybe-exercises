@@ -35,14 +35,36 @@ function toggleInfo() {
   }
 }
 
+function toTop() {
+
+}
+
 function addEventListeners() {
   const closeButton = document.querySelector('#close-header');
   const openButton = document.querySelector('#open-header');
   const infoButton = document.querySelector('#info-button');
+  const toTopButton = document.querySelector('#to-top');
+  toTopButton.addEventListener('click', toTop);
   closeButton.addEventListener('click', closeHeader);
   openButton.addEventListener('click', openHeader);
   infoButton.addEventListener('click', toggleInfo);
 }
+
+function detectScroll() {
+  const toTopButton = document.querySelector('#to-top');
+  const mainContent = document.querySelector('.main-content');
+  console.log(mainContent.scrollTop);
+  console.log(screen.height);
+  if (document.body.scrollTop === screen.height) {
+    toTopButton.style.display = 'block';
+  } else {
+    toTopButton.style.display = 'none';
+  }
+}
+
+window.onscroll = function() {
+  detectScroll();
+};
 
 window.onload = function () {
   hideHeader();
