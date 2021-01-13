@@ -36,12 +36,23 @@ const clickCounter = () => {
   clickCountDiv.innerHTML = `Yay! you clicked me this many times: ${clickCount}`;
 }
 
+let stringToChange = 'Tryber X aqui!';
+
 const putAtX = (name) => {
-  let stringToChange = 'Tryber X aqui!';
   return stringToChange.replace(/x/gi, name);
 }
 
 console.log(putAtX('Bebeto'));
+
+const skillList = ['HTML','CSS','JS','Git','Bash'];
+
+const concatSkills = (stringToChange) => {
+  skillList.sort();
+  const outputSkills = `${stringToChange} Minhas cinco principais habilidades são: ${skillList}`
+  return outputSkills
+}
+
+console.log(concatSkills(stringToChange));
 
 window.onload = () => {
   const clickMe = document.querySelector('#click-me');
