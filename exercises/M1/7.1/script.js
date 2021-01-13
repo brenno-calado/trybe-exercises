@@ -33,8 +33,15 @@ let clickCount = 0;
 const clickCounter = () => {
   const clickCountDiv = document.querySelector('#click-count-div');
   clickCount += 1;
-  clickCountDiv.innerHTML = clickCount;
+  clickCountDiv.innerHTML = `Yay! you clicked me this many times: ${clickCount}`;
 }
+
+const putAtX = (name) => {
+  let stringToChange = 'Tryber X aqui!';
+  return stringToChange.replace(/x/gi, name);
+}
+
+console.log(putAtX('Bebeto'));
 
 window.onload = () => {
   const clickMe = document.querySelector('#click-me');
