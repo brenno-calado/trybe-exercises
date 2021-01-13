@@ -27,3 +27,16 @@ const longestWord = (phrase) => {
 }
 
 console.log(longestWord('brenno calado vieira de meloasdasdad nascimento'));
+
+let clickCount = 0;
+
+const clickCounter = () => {
+  const clickCountDiv = document.querySelector('#click-count-div');
+  clickCount += 1;
+  clickCountDiv.innerHTML = clickCount;
+}
+
+window.onload = () => {
+  const clickMe = document.querySelector('#click-me');
+  clickMe.addEventListener('click', clickCounter);
+};
