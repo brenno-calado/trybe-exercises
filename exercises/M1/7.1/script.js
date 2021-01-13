@@ -1,9 +1,29 @@
-const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+factorial = number => {
+  if (number > 1) {
+    let result = number;
+    for (let index = number - 1; index > 1; index -= 1) {
+      result *= index;
+    }
+    return result
+  } else {
+    let result = 1;
+    return result
+  }
+};
 
-const orderArray = oddsAndEvens => {
-  oddsAndEvens.sort(function(a, b){return a - b});
+console.log(factorial(5));
+
+const longestWord = (phrase) => {
+  const breakedWords = phrase.split(' ');
+  let maxLength = 0;
+  let biggestWord = '';
+  for (let i in breakedWords) {
+    if (maxLength <= breakedWords[i].length) {
+      maxLength = breakedWords[i].length;
+      biggestWord = breakedWords[i];
+    }
+  }
+  return biggestWord
 }
 
-orderArray(oddsAndEvens);
-
-console.log(oddsAndEvens);
+console.log(longestWord('brenno calado vieira de meloasdasdad nascimento'));
