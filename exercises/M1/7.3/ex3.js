@@ -18,3 +18,4 @@ assert.strictEqual(typeof myRemoveWithoutCopy, 'function');
 assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 4]);
 assert.notDeepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4]);
 assert.deepStrictEqual(myRemoveWithoutCopy(testArray, 2), testArray);
+assert.deepStrictEqual(myRemoveWithoutCopy(testArray, 6), testArray);
