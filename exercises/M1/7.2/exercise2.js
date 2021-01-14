@@ -25,4 +25,4 @@ changeSchedule(lesson2, turno, manha);
 
 const listKeys = object => Object.keys(object);
 const objectSize = object => listKeys(object).length;
-console.log(objectSize(lesson2));
+const listValues = object => Object.values(object);
