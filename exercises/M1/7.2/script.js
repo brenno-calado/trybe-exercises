@@ -36,7 +36,14 @@ const order = {
 
 const customerInfo = (order) => {
   // Adicione abaixo as informações necessárias.
-  const answer = `Olá Ana Silveira, entrega para: ${order['name']}, Telefone: ${order['phoneNumber']}, ${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment}`;
+  // Para ficar mais fácil a obtenção dos dados, melhor reservar em constantes
+  const deliveryPerson = order.order.delivery['deliveryPerson'];
+  const customerName = order['name'];
+  const phone = order['phoneNumber'];
+  const street = order['address'].street;
+  const streetNumber = order['address'].number;
+  const apartment = order.address['apartment'];
+  const answer = `Olá ${deliveryPerson}, entrega para: ${customerName}, Telefone: ${phone}, ${street}, Nº: ${streetNumber}, AP: ${apartment}`;
   return answer;
 }
 
@@ -44,7 +51,24 @@ console.log(customerInfo(order));
 
 const orderModifier = (order) => {
   // Adicione abaixo as informações necessárias.
+  const name = order.name = 'Luiz Silva';
+  const newTotal = order.payment.total = '50';
+  const muzzarellaAndCalabresa = order.order.pizza = {
+    muzzarella: {
+      amount: 1,
+      price: 15
+    },
 
+    calabresa: {
+      amount: 1,
+      price: 20
+    }
+  }
+
+  const drinkName = order.order.drinks.coke.type;
+  
+  const answer = `Olá ${name}, o total do seu pedido de ${Object.keys(muzzarellaAndCalabresa)} e ${drinkName} é R$${newTotal},00.`;
+  return answer;
 }
 
-orderModifier(order);
+console.log(orderModifier(order));
