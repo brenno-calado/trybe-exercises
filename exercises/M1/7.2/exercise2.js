@@ -37,4 +37,13 @@ const sumStudents = () => {
   return sum;
 };
 const getValueByNumber = (object, key) => Object.values(object)[key];
-console.log(getValueByNumber(lesson2, 0));
+const verifyPair = (object, key, value) => {
+  const entriesArray = Object.entries(object);
+  for (let i in entriesArray) {
+    if(entriesArray[i][0] === key && entriesArray[i][1] === value) {
+      return true
+    }
+  }
+  return false
+};
+console.log(verifyPair(lesson2, 'numeroEstudantes', 10));
