@@ -26,3 +26,10 @@ changeSchedule(lesson2, turno, manha);
 const listKeys = object => Object.keys(object);
 const objectSize = object => listKeys(object).length;
 const listValues = object => Object.values(object);
+const lessonList = {
+  lesson1,
+  lesson2,
+  lesson3
+}
+const allLessons = () => Object.assign({}, lessonList);
+console.log(allLessons());
