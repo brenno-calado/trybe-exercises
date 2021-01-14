@@ -8,4 +8,5 @@ function myFizzBuzz(num) {
   return num;
 }
 
-// implemente seus testes aqui
+assert.strictEqual(typeof myFizzBuzz, 'function');
+assert.strictEqual(myFizzBuzz(15), 'fizzbuzz');
