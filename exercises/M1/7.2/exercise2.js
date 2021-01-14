@@ -35,5 +35,6 @@ const sumStudents = () => {
     sum += allLessons[i].numeroEstudantes
   }
   return sum;
-}; 
-console.log(sumStudents());
+};
+const getValueByNumber = (object, key) => Object.values(object)[key];
+console.log(getValueByNumber(lesson2, 0));
