@@ -72,12 +72,14 @@ assert.strictEqual(authorBornIn1947(), 'Stephen King');
 
 function smallerName() {
   let nameBook;
+
   const findSmallest = (value) => {
     if (nameBook === undefined || value.name.length <= nameBook.length) {
       nameBook = value.name;
     }
   }
-  books.forEach(findSmallest)
+  
+  books.forEach(findSmallest);
 
   return nameBook;
 }
