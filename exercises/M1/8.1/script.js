@@ -85,3 +85,11 @@ function smallerName() {
 }
 
 assert.strictEqual(smallerName(), 'Duna');
+
+function getNamedBook(size) {
+  // find first book name with x characters
+  const bookNameSizeMatch = books.find((value) => value.name.length === size)
+  return bookNameSizeMatch.name;
+}
+
+assert.deepStrictEqual(getNamedBook(26), 'As Crônicas de Gelo e Fogo');
