@@ -160,3 +160,11 @@ function someBookWasReleaseOnThe80s() {
 };
 
 assert.strictEqual(someBookWasReleaseOnThe80s(), true);
+
+function authorUnique() {
+  // gabarito para refletir abaixo
+  return books.every((book)=> !books.some((bookSome)=> (bookSome.author.birthYear === book.author.birthYear) && (bookSome.author.name !== book.author.name)));
+}
+console.log(authorUnique());
+
+assert.strictEqual(authorUnique(), false);
