@@ -150,8 +150,13 @@ const expectedResult = [
 assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);
 
 function everyoneWasBornOnSecXX() {
-  // escreva seu código aqui
   return Object.values(books).every((values) => values.author.birthYear < 2000 && values.author.birthYear > 1899);
 };
 
 assert.strictEqual(everyoneWasBornOnSecXX(), false);
+
+function someBookWasReleaseOnThe80s() {
+  return Object.values(books).some((values) => values.releaseYear < 1990 && values.releaseYear > 1979);
+};
+
+assert.strictEqual(someBookWasReleaseOnThe80s(), true);
