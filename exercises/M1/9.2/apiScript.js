@@ -14,4 +14,8 @@ const fetchJoke = () => {
 
 const appendJoke = (joke) => document.querySelector('#joke-container').innerHTML = joke;
 
+async function SquaredNumbers() {
+  
+}
+
 window.onload = () => fetchJoke();
