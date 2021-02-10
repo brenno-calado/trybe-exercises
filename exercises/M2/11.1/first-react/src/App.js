@@ -1,8 +1,14 @@
 import './App.css';
 import HelloWorld from './helloWorld';
+import MyName from './component';
 
 function App() {
-  return <HelloWorld />
+  return (
+    <div className="App">
+      <HelloWorld />
+      <MyName />
+    </div>
+  )
 }
 
 export default App;
