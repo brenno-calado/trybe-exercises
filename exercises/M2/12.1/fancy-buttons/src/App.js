@@ -4,16 +4,36 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.printText = this.printText.bind(this);
+    this.sumClicks = this.sumClicks.bind(this);
+    this.state = {
+      totalClicksb1: 0,
+      totalClicksb2: 0,
+      totalClicksb3: 0,
+    };
   }
-  printText() {
-    console.log(this);
-    console.log('some text');
+  sumClicksOne() { 
+    this.setState(({ totalClicksb1 }) => ({
+      totalClicksb1: totalClicksb1 + 1,
+    }));
+  }
+
+  sumClicksTwo() { 
+    this.setState(({ totalClicksb2 }) => ({
+      totalClicksb2: totalClicksb2 + 1,
+    }));
+  }
+
+  sumClicksThree() { 
+    this.setState(({ totalClicksb3 }) => ({
+      totalClicksb3: totalClicksb3 + 1,
+    }));
   }
   render() {
     return (
     <main className="App">
-      <button type="button" onClick={this.printText}>Click me, Senpai!</button>
+      <button id="1" type="button" onClick={this.sumClicksOne}>{this.state.totalClicksb1}</button>
+      <button id="2" type="button" onClick={this.sumClicksTwo}>{this.state.totalClicksb2}</button>
+      <button id="3" type="button" onClick={this.sumClicksThree}>{this.state.totalClicksb3}</button>
     </main>
     )
   };
