@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 
 class Video extends React.Component {
   render() {
-    // state que veio da store em vez do location
     const { video } = this.props;
-    console.log(video);
     return video ? (
       <main className="flex">
         <section className="left">
