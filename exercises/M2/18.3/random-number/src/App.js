@@ -1,7 +1,10 @@
+import useTimer from './hooks/useTimer';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+  const { timer, randomNumber, isMultiple } = useTimer();
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +20,11 @@ function App() {
         >
           Learn React
         </a>
+        {timer}
+        <br />
+        {randomNumber}
+        <br />
+        {isMultiple ? 'Acerto' : ''}
       </header>
     </div>
   );
