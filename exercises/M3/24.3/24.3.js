@@ -73,6 +73,9 @@ db.movies.find(
   { _id: 0, title: 1 },
 );
 // #12
+db.movies.find(
+  { budget: { $mod: [5,0] }, category: { $size: 2 } },
+);
 // #13
 // #14
 // #15
