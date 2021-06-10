@@ -58,6 +58,10 @@ db.movies.find(
   { _id: 0, title: 1, ratings: 1 },
 );
 // #9
+db.movies.find(
+  { category: "adventure", ratings: { $gt: 103 } },
+  { _id: 0, title: 1, ratings: 1, category: 1 },
+);
 // #10
 // #11
 // #12
