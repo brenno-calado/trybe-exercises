@@ -77,6 +77,10 @@ db.movies.find(
   { budget: { $mod: [5,0] }, category: { $size: 2 } },
 );
 // #13
+db.movies.find(
+  { $or: [{ category: "sci-fi"}, {ratings: { $gt: 199 } }] },
+  { _id: 0, title: 1, ratings: 1, category: 1 }
+);
 // #14
 // #15
 // #16
