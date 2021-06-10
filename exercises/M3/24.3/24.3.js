@@ -10,6 +10,16 @@ db.movies.find(
   }
 );
 // #3
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: {
+      ratings: {
+        $each: [85, 100, 102, 105],
+      }
+    }
+  }
+);
 // #4
 // #5
 // #6
