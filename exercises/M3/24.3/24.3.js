@@ -32,6 +32,16 @@ db.movies.updateOne(
   }
 );
 // #5
+db.movies.updateOne(
+  { title: "Home Alone" },
+  {
+    $push: {
+      ratings: {
+        $each: [200, 99, 65],
+      }
+    }
+  }
+);
 // #6
 // #7
 // #8
