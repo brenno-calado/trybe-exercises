@@ -63,6 +63,10 @@ db.movies.find(
   { _id: 0, title: 1, ratings: 1, category: 1 },
 );
 // #10
+db.movies.find(
+  { category: { $size: 2 } },
+  { _id: 0, title: 1 }
+);
 // #11
 // #12
 // #13
