@@ -48,6 +48,10 @@ db.movies.find(
   { _id: 0, title: 1, ratings: 1 },
 );
 // #7
+db.movies.find(
+  { ratings: { $elemMatch: { $gte: 100, $lte: 105 } } },
+  { _id: 0, title: 1, ratings: 1 },
+);
 // #8
 // #9
 // #10
