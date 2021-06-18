@@ -1,6 +1,8 @@
-const peso = 55;
-const altura = 1.70;
+const readline = require("readline-sync");
 
-const imc = peso / Math.pow(altura, 2);
+const peso = readline.questionFloat("Digite seu peso(kg): ");
+const altura = readline.questionFloat("Digite sua altura(m): ");
+
+const imc = Math.round((peso / Math.pow(altura, 2)) * 100) / 100;
 
 console.log(imc);
