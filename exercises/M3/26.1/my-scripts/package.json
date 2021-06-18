@@ -8,5 +8,8 @@
     "imc": "node imc.js"
   },
   "author": "bcvmn <github/brenno-calado>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
