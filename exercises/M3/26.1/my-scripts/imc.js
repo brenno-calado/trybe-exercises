@@ -32,3 +32,7 @@ function calcIMC() {
 }
 
 calcIMC();
+
+module.exports = {
+  calcIMC(),
+}
