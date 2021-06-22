@@ -1,4 +1,4 @@
-function addAndMult(a, b, c) {
+async function addAndMult(a, b, c) {
   const promise = new Promise((res, rej) => {
     if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') return rej(Error('Informe apenas números'));
     const result = (a + b) * c;
