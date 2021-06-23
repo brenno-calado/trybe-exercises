@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const { integerValue } = require("../integerValue");
+const integerValue = require("../integerValue");
 
 describe("A função integerValue retorna", () => {
   it("o texto 'positivo' quando o parâmetro for maior que 0", () => {
