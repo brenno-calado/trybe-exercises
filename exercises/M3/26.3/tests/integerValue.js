@@ -19,5 +19,10 @@ describe("A função integerValue retorna", () => {
     expect(neutro).to.be.a("string");
     expect(neutro).to.be.equals("neutro");
   });
+  it("o texto 'o valor deve ser um número' caso o parâmetro não seja do tipo number", () => {
+    const notANumber = integerValue('10');
+    expect(notANumber).to.be.a("string");
+    expect(notANumber).to.be.equals("o valor deve ser um número");
+  });
 });
 
