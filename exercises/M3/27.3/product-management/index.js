@@ -1,13 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const PORT = 3000;
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/products', require('./controllers/productController'));
+app.use('/products', require('./routes/routes'));
 
-const PORT = 3000;
-
-app.listen(PORT);
-
+app.listen(process.env.PORT || PORT);
