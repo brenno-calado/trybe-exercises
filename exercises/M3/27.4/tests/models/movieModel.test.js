@@ -1,4 +1,6 @@
 const { expect } = require('chai');
+const sinon = require('sinon');
+const { MongoClient } = require('mongodb');
 
 const movieModel = require('../../models/movieModel');
 
@@ -8,6 +10,18 @@ describe('create new movie', () => {
     directedBy: 'Jane Dow',
     releaseYear: 1999,
   };
+
+  before(() => {
+    const MOCK_ID = '604cb554311d68f491ba5781';
+    const connectionMock = {
+      db: async () => ({ collection: async () => ({ insertOne: async () => ({ insertedId: MOCK_ID }) }) }),
+    };
+    sinon.stub(MongoClient, 'connect').resolves(connectionMock);
+  });
+
+  after(() => {
+    MongoClient.connect.restore();
+  });
 
   describe('on success', async () => {
     it('returns an object', async () => {
