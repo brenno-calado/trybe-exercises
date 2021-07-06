@@ -2,35 +2,51 @@ const productModel = require('../models/productModel');
 const OK = 200;
 const CREATED = 201;
 const UPDATED = 204;
+const ERROR = 500;
+const NOT_FOUND = 404;
 
 
 const getAll = async (_request, response) => {
-  const products = await productModel.getAll();
-  response.status(OK).json(products);
+  try {
+    const products = await productModel.getAll();
+    return response.status(OK).json(products);
+  } catch (err) {
+    return response.status(ERROR).json({ message: 'Erro interno'});
+  }
 };
 
 const getById = async (request, response) => {
   const product = await productModel.getById(request.params.id);
-  response.status(OK).json(product);
+  if (!product) return response.status(NOT_FOUND).json({ message: 'produto não encontrado'});
+  return response.status(OK).json(product);
 };
 
 const create = async (request, response) => {
   const { name, brand } = request.body;
-  const newProduct = await productModel.create(name, brand);
-  response.status(CREATED).json(newProduct);
+  try {
+    const newProduct = await productModel.create(name, brand);
+  } catch (err) {
+    return response.status(ERROR).json({ message: 'Erro interno'});
+  }
+  return response.status(CREATED).json(newProduct);
 };
 
 const del = async (request, response) => {
-  const products = await productModel.del(request.params.id);
-
-  response.status(OK).json(products);
+  try {
+    const products = await productModel.del(request.params.id);
+  } catch (err) {
+    return response.status(ERROR).json({ message: 'Erro interno'});
+  }
+  return response.status(OK).json(products);
 };
 
 const update = async (request, response) => {
   const { name, brand } = request.body;
-
-  await productModel.update(request.params.id, name, brand);
-
+  try {
+    await productModel.update(request.params.id, name, brand);
+  } catch (err) {
+    return response.status(ERROR).json({ message: 'Erro interno' })
+  }
   return response.status(UPDATED).send();
 };
 
