@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 
-const MovieService = { service: () => {} };
+const MovieService = require('../../services/movieService');
 
 describe('create new movie', () => {
   describe('when payload is invalid', async () => {
