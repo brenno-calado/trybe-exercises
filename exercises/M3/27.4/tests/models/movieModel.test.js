@@ -1,8 +1,6 @@
 const { expect } = require('chai');
 
-const movieModel = {
-  create: () => {}
-}
+const movieModel = require('../../models/movieModel');
 
 describe('create new movie', () => {
   const payloadMovie = {

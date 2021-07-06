@@ -8,4 +8,4 @@ const create = async ({ title, directedBy, releaseYear }) => {
   return { id };
 }
 
-module.exports = create;
+module.exports = { create };
