@@ -1,22 +1,97 @@
-const { expect } = require('chai');
 const sinon = require('sinon');
-const MovieModel = require('../../models/movieModel');
-const MovieService = require('../../services/movieService');
+const { expect } = require('chai');
 
-describe('create new movie', () => {
-  describe('when payload is invalid', async () => {
-    const payloadMovie = {};
-    it('returns a boolean', async () => {
-      const response = await MovieService.create(payloadMovie);
-      expect(response).to.be.a('boolean');
+const MoviesModel = require('../../models/movieModel');
+const MoviesService = require('../../services/movieService');
+
+describe('Busca todos os filmes no BD', () => {
+  describe('quando não existe nenhum filme criado', () => {
+    before(() => {
+      sinon.stub(MoviesModel, 'getAll')
+        .resolves([]);
     });
-    it('to be "false"', async () => {
-      const response = await MovieService.create(payloadMovie);
-      expect(response).to.be.equal(false);
+
+    after(() => {
+      MoviesModel.getAll.restore();
     });
+
+    it('retorna um array', async () => {
+      const response = await MoviesService.getAll();
+
+      expect(response).to.be.an('array');
+    });
+
+    it('o array está vazio', async () => {
+      const response = await MoviesService.getAll();
+
+      expect(response).to.be.empty;
+    });
+
   });
 
-  describe('When payload is valid', async () => {
+  describe('quando existem filmes criados', () => {
+    before(() => {
+      sinon.stub(MoviesModel, 'getAll')
+        .resolves([
+          {
+            id: '604cb554311d68f491ba5781',
+            title: 'Example Movie',
+            directedBy: 'Jane Dow',
+            releaseYear: 1999,
+          }
+        ]);
+    });
+
+    after(() => {
+      MoviesModel.getAll.restore();
+    });
+
+    it('retorna um array', async () => {
+      const response = await MoviesService.getAll();
+
+      expect(response).to.be.an('array');
+    });
+
+    it('o array não está vazio', async () => {
+      const response = await MoviesService.getAll();
+
+      expect(response).to.be.not.empty;
+    });
+
+    it('o array possui itens do tipo objeto', async () => {
+      const [ item ] = await MoviesService.getAll();
+
+      expect(item).to.be.an('object');
+    });
+
+    it('tais itens possui as propriedades: "id", "title", "releaseYear" e "directedBy"', async () => {
+      const [ item ] = await MoviesService.getAll();
+
+      expect(item).to.include.all.keys('id', 'title', 'releaseYear', 'directedBy')
+    });
+
+  });
+});
+
+describe('Insere um novo filme no BD', () => {
+  describe('quando o payload informado não é válido', () => {
+    const payloadMovie = {};
+
+    it('retorna um boolean', async () => {
+      const response = await MoviesService.create(payloadMovie);
+
+      expect(response).to.be.a('boolean');
+    });
+
+    it('o boolean contém "false"', async () => {
+      const response = await MoviesService.create(payloadMovie);
+
+      expect(response).to.be.equal(false);
+    });
+
+  });
+
+  describe('quando é inserido com sucesso', () => {
     const payloadMovie = {
       title: 'Example Movie',
       directedBy: 'Jane Dow',
@@ -26,21 +101,25 @@ describe('create new movie', () => {
     before(() => {
       const ID_EXAMPLE = '604cb554311d68f491ba5781';
 
-      sinon.stub(MovieModel, 'create')
+      sinon.stub(MoviesModel, 'create')
         .resolves({ id: ID_EXAMPLE });
-    });
+    })
 
     after(() => {
-      MovieModel.create.restore();
-    });
+      MoviesModel.create.restore();
+    })
 
-    it('returns an object', async () => {
-      const response = await MovieService.create(payloadMovie);
+    it('retorna um objeto', async () => {
+      const response = await MoviesService.create(payloadMovie);
+
       expect(response).to.be.a('object');
     });
-    it('returns movie id property', async () => {
-      const response = await MovieService.create(payloadMovie);
+
+    it('tal objeto possui o "id" do novo filme inserido', async () => {
+      const response = await MoviesService.create(payloadMovie);
+
       expect(response).to.have.a.property('id');
-    })
-  })
+    });
+
+  });
 });
