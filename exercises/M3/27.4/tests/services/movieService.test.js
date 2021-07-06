@@ -1,5 +1,6 @@
 const { expect } = require('chai');
-
+const sinon = require('sinon');
+const MovieModel = require('../../models/movieModel');
 const MovieService = require('../../services/movieService');
 
 describe('create new movie', () => {
@@ -21,6 +22,18 @@ describe('create new movie', () => {
       directedBy: 'Jane Dow',
       releaseYear: 1999,
     };
+
+    before(() => {
+      const ID_EXAMPLE = '604cb554311d68f491ba5781';
+
+      sinon.stub(MovieModel, 'create')
+        .resolves({ id: ID_EXAMPLE });
+    });
+
+    after(() => {
+      MovieModel.create.restore();
+    });
+
     it('returns an object', async () => {
       const response = await MovieService.create(payloadMovie);
       expect(response).to.be.a('object');
