@@ -8,7 +8,7 @@ const getAll = async (request, response, next) => {
 };
 
 const getById = async (request, response, next) => {
-  const product = await productModel.getById(req.params.id);
+  const product = await productModel.getById(request.params.id);
   response.send(product);
 };
 
@@ -18,18 +18,18 @@ const create = async (request, response) => {
   response.send(newProduct);
 };
 
-const del = async (req, res) => {
-  const products = await ProductModel.del(req.params.id);
+const del = async (request, response) => {
+  const products = await productModel.del(request.params.id);
 
-  res.send(products);
+  response.send(products);
 };
 
-const update = async (req, res) => {
-  const { name, brand } = req.body;
+const update = async (request, response) => {
+  const { name, brand } = request.body;
 
-  const products = await ProductModel.update(req.params.id, name, brand);
+  const products = await productModel.update(request.params.id, name, brand);
 
-  res.send(products);
+  response.send(products);
 };
 
 module.exports = {

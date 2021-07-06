@@ -16,6 +16,6 @@ routes.post('/', create);
 
 routes.delete('/:id', del);
 
-routes.update('/:id', update);
+routes.put('/:id', update);
 
 module.exports = routes;
