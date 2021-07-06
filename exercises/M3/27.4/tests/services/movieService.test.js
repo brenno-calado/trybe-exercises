@@ -26,7 +26,7 @@ describe('create new movie', () => {
       expect(response).to.be.a('object');
     });
     it('returns movie id property', async () => {
-      const response = await MovieService.create(payload);
+      const response = await MovieService.create(payloadMovie);
       expect(response).to.have.a.property('id');
     })
   })
