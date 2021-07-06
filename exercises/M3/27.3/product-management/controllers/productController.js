@@ -1,35 +1,37 @@
-const express = require('express');
 const productModel = require('../models/productModel');
+const OK = 200;
+const CREATED = 201;
+const UPDATED = 204;
 
 
-const getAll = async (request, response, next) => {
+const getAll = async (_request, response) => {
   const products = await productModel.getAll();
-  response.send(products);
+  response.status(OK).json(products);
 };
 
-const getById = async (request, response, next) => {
+const getById = async (request, response) => {
   const product = await productModel.getById(request.params.id);
-  response.send(product);
+  response.status(OK).json(product);
 };
 
 const create = async (request, response) => {
   const { name, brand } = request.body;
   const newProduct = await productModel.create(name, brand);
-  response.send(newProduct);
+  response.status(CREATED).json(newProduct);
 };
 
 const del = async (request, response) => {
   const products = await productModel.del(request.params.id);
 
-  response.send(products);
+  response.status(OK).json(products);
 };
 
 const update = async (request, response) => {
   const { name, brand } = request.body;
 
-  const products = await productModel.update(request.params.id, name, brand);
+  await productModel.update(request.params.id, name, brand);
 
-  response.send(products);
+  return response.status(UPDATED).send();
 };
 
 module.exports = {
