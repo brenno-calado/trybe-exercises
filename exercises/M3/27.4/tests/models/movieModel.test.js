@@ -138,3 +138,18 @@ describe('Insere um novo filme no BD', () => {
 
   });
 });
+
+describe('Busca um filme no BD', () => {
+  describe('Quando não existe o filme', () => {
+    it('retorna um array', () => {});
+
+    it('retorna um array vazio', () => {});
+  });
+  describe('Quando existe o filme', () => {
+    it('retorna um array', () => {});
+
+    it('um array com um objeto', () => {});
+
+    it('com as propriedades: "id", "title", "releaseYear" e "directedBy"', () => {});
+  });
+});
