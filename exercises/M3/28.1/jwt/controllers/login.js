@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
 
   const jwtConfig = {
     expiresIn: '7d',
-    algorithm: 'H256',
+    algorithm: 'HS256',
   }
 
   const token = jwt.sign({ data: user }, secret, jwtConfig);
