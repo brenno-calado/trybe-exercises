@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "node index.js",
     "debug": "nodemon index.js",
-    "lint": "eslint **/*.js"
+    "lint": "eslint . --ext js"
   },
   "keywords": [],
   "author": "brenno-calado <brenno.calado@gmail.com>",
