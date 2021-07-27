@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "yuki",
+    "password": "yuki-Nagato12",
     "database": "orm_example",
     "host": "127.0.0.1",
     "dialect": "mysql"
