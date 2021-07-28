@@ -22,7 +22,7 @@ app.get('/employees/:id', async (req, res) => {
     const { id } = req.params;
     const employee = await Employee.findOne({
         where: { id },
-        include: [{ model: Address, as: 'addresses' }],
+        include: [{ model: Address, as: 'addresses', attributes: { exclude: ['id', 'employee_id', 'employeeId'] }}],
       });
 
     if (!employee)
